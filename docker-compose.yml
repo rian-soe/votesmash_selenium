@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  selenium-tests:
+    build: .
+    environment:
+      - HEADLESS=true
+      - BROWSER=chrome
+      - WINDOW_SIZE=1920,1080
+      - CI=true
+      # Database configuration
+      - DB_HOST=mysql
+      - DB_USER=votesmash_user
+      - DB_PASSWORD=votesmash_password
+      - DB_NAME=votesmash
+      - DB_PORT=3306
+      # Application URL
+      - APP_URL=http://localhost:8080
+    depends_on:
+      - mysql
+    volumes:
+      - ./test/test_results:/app/test/test_results
+    networks:
+      - selenium-network
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=votesmash
+      - MYSQL_USER=votesmash_user
+      - MYSQL_PASSWORD=votesmash_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - selenium-network
+
+  # Optional: Web application service (if you want to test against a containerized app)
+  web-app:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/usr/share/nginx/html
+    networks:
+      - selenium-network
+
+volumes:
+  mysql_data:
+
+networks:
+  selenium-network:
+    driver: bridge

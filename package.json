@@ -1,0 +1,33 @@
+{
+  "name": "selenium_js",
+  "version": "1.0.0",
+  "description": "Selenium WebDriver tests for VoteSmash application",
+  "main": "test/runAllTest.js",
+  "scripts": {
+    "test": "mocha test/*.js",
+    "test:headless": "HEADLESS=true npm test",
+    "test:ci": "CI=true HEADLESS=true npm test",
+    "test:single": "node test/runAllTest.js",
+    "test:docker": "docker-compose up --build --abort-on-container-exit",
+    "test:docker:clean": "docker-compose down -v && docker-compose up --build --abort-on-container-exit",
+    "start": "node test/runAllTest.js",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix"
+  },
+  "keywords": ["selenium", "webdriver", "testing", "automation", "ci-cd"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "mocha": "^11.1.0",
+    "mysql2": "^3.14.1",
+    "selenium-webdriver": "^4.30.0",
+    "tunnel-ssh": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}

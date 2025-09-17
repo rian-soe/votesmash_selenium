@@ -1,0 +1,51 @@
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-08-23T08:53:52.846Z | test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-08-23T08:54:00.742Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:21:5 - testConfirmPassword] Filling registration form with mismatched passwords
+[test03.js:28:5 - testConfirmPassword] Submitting registration form
+[test03.js:31:5 - testConfirmPassword] Verifying password mismatch error message
+[test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-08-23T08:54:08.564Z | test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:21:7 - testExistingEmail] Filling registration form with existing email
+[test04.js:28:7 - testExistingEmail] Submitting registration form
+[test04.js:31:7 - testExistingEmail] Verifying existing email error message
+[test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-08-23T08:54:16.113Z | test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:123:5 - testTourCreate] ❌ unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=139.0.7258.139)
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:123:5 - testTourCreate] ❌ no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=139.0.7258.139)
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:5 - testTourCreate] Navigating to Add Tour page
+[test05.js:29:5 - testTourCreate] Filling tour details
+[test05.js:48:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:51:5 - testTourCreate] Adding media and options
+[test05.js:123:5 - testTourCreate] ❌ invalid argument: File not found : C:\Users\Administrator\Pictures\Screenshots\p3.png
+  (Session info: chrome=139.0.7258.139)
