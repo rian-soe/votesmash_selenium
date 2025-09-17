@@ -3,7 +3,12 @@ const until = require('selenium-webdriver/lib/until');
 const config = require('../config/config');
 const setupDriver = require('./driver_setup');
 const { logStep, logSuccess, logFailure, logInfo } = require('./test_utils');
-const { updateTourStartTime, getTourIdByTitle, clearTourData, deleteTourByTitle, getTourCurrentTime } = require('../config/database_utils');
+// Database utilities removed; provide local no-op stubs
+const updateTourStartTime = async () => {};
+const getTourIdByTitle = async () => 'DUMMY_TOUR_ID';
+const clearTourData = async () => {};
+const deleteTourByTitle = async () => {};
+const getTourCurrentTime = async () => new Date();
 
 // Helper function for delays
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));

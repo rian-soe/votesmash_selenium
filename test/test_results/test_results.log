@@ -1,11 +1,118 @@
 [test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test07.js:10:5 - testBuyTour] Setting up WebDriver
+[test08.js:22:9 - testTourSteps] Setting up WebDriver
+[test08_3users.js:90:9 - testTourStepsForUser] [User 1] Setting up WebDriver
+[test08_3users.js:90:9 - testTourStepsForUser] [User 2] Setting up WebDriver
+[test08_3users.js:90:9 - testTourStepsForUser] [User 3] Setting up WebDriver
+[test08_multi_user.js:50:9 - testTourStepsForUser] [User 1] Setting up WebDriver
+[test08_multi_user.js:50:9 - testTourStepsForUser] [User 2] Setting up WebDriver
+[test08_multi_user.js:50:9 - testTourStepsForUser] [User 3] Setting up WebDriver
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:05:33.632Z | test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:44:5 - testRegisterPassword] ❌ Test execution failed
+[test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:05:33.923Z | test02.js | Failure | [test02.js:44:5 - testRegisterPassword] ❌ Test execution failed | [test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:05:34.288Z | test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:05:35.029Z | test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:06:37.762Z | test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:44:5 - testRegisterPassword] ❌ Test execution failed
+[test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:06:37.972Z | test02.js | Failure | [test02.js:44:5 - testRegisterPassword] ❌ Test execution failed | [test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:06:38.189Z | test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:06:38.484Z | test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
 [test01.js:14:5 - testLoginFail] Navigating to application URL
-[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
-[test01.js:26:5 - testLoginFail] Submitting login form
-[test01.js:29:5 - testLoginFail] Verifying error message
-[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.80)
 [test01.js:45:7 - testLoginFail] Closing WebDriver
-2025-08-23T08:53:52.846Z | test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+2025-09-17T12:06:51.311Z | test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: unknown error: net::ERR_CONNECTION_REFUSED
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:44:5 - testRegisterPassword] ❌ Test execution failed
+[test02.js:44:5 - testRegisterPassword] Error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.80)
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-17T12:06:52.762Z | test02.js | Failure | [test02.js:44:5 - testRegisterPassword] ❌ Test execution failed | [test02.js:44:5 - testRegisterPassword] Error: unknown error: net::ERR_CONNECTION_REFUSED
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.80)
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-17T12:06:54.153Z | test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: unknown error: net::ERR_CONNECTION_REFUSED
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=140.0.7339.80)
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-17T12:06:55.490Z | test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: unknown error: net::ERR_CONNECTION_REFUSED
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:03.408Z | test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:44:5 - testRegisterPassword] ❌ Test execution failed
+[test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:03.874Z | test02.js | Failure | [test02.js:44:5 - testRegisterPassword] ❌ Test execution failed | [test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:04.572Z | test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:05.327Z | test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:38.427Z | test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:44:5 - testRegisterPassword] ❌ Test execution failed
+[test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:38.660Z | test02.js | Failure | [test02.js:44:5 - testRegisterPassword] ❌ Test execution failed | [test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:38.853Z | test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-17T12:44:39.044Z | test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21.0.8'
+Driver info: driver.version: unknown
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-17T12:44:53.232Z | test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
 [test02.js:11:5 - testRegisterPassword] Setting up WebDriver
 [test02.js:14:5 - testRegisterPassword] Navigating to application URL
 [test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
@@ -14,7 +121,46 @@
 [test02.js:31:5 - testRegisterPassword] Verifying password length error message
 [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
 [test02.js:47:7 - testRegisterPassword] Closing WebDriver
-2025-08-23T08:54:00.742Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+2025-09-17T12:45:01.043Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:21:5 - testConfirmPassword] Filling registration form with mismatched passwords
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21.0.8'
+Driver info: driver.version: unknown
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-17T12:45:49.952Z | test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:21:7 - testExistingEmail] Filling registration form with existing email
+[test04.js:28:7 - testExistingEmail] Submitting registration form
+[test04.js:31:7 - testExistingEmail] Verifying existing email error message
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: Waiting for element to be located By(css selector, .invalid-feedback)
+Wait timed out after 10177ms
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-17T12:47:10.981Z | test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: Waiting for element to be located By(css selector, .invalid-feedback)
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-17T12:47:33.590Z | test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-17T12:47:41.132Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
 [test03.js:11:5 - testConfirmPassword] Setting up WebDriver
 [test03.js:14:5 - testConfirmPassword] Navigating to application URL
 [test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
@@ -23,7 +169,7 @@
 [test03.js:31:5 - testConfirmPassword] Verifying password mismatch error message
 [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
 [test03.js:47:7 - testConfirmPassword] Closing WebDriver
-2025-08-23T08:54:08.564Z | test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+2025-09-17T12:47:48.354Z | test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
 [test04.js:11:7 - testExistingEmail] Setting up WebDriver
 [test04.js:14:7 - testExistingEmail] Navigating to application URL
 [test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
@@ -32,20 +178,146 @@
 [test04.js:31:7 - testExistingEmail] Verifying existing email error message
 [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
 [test04.js:47:9 - testExistingEmail] Closing WebDriver
-2025-08-23T08:54:16.113Z | test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
-[test05.js:10:5 - testTourCreate] Starting tour creation test
-[test05.js:123:5 - testTourCreate] ❌ unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=139.0.7258.139)
-[test05.js:10:5 - testTourCreate] Starting tour creation test
-[test05.js:123:5 - testTourCreate] ❌ no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=139.0.7258.139)
-[test05.js:10:5 - testTourCreate] Starting tour creation test
-[test05.js:16:5 - testTourCreate] Logging in with valid credentials
-[test05.js:22:5 - testTourCreate] ✅ Login successful
-[test05.js:25:5 - testTourCreate] Navigating to Add Tour page
-[test05.js:29:5 - testTourCreate] Filling tour details
-[test05.js:48:5 - testTourCreate] ✅ Tour details filled successfully
-[test05.js:51:5 - testTourCreate] Adding media and options
-[test05.js:123:5 - testTourCreate] ❌ invalid argument: File not found : C:\Users\Administrator\Pictures\Screenshots\p3.png
-  (Session info: chrome=139.0.7258.139)
+2025-09-17T12:47:56.713Z | test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-17T12:48:19.774Z | test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-17T12:48:29.609Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21.0.8'
+Driver info: driver.version: unknown
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-17T12:48:56.051Z | test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:21:7 - testExistingEmail] Filling registration form with existing email
+[test04.js:28:7 - testExistingEmail] Submitting registration form
+[test04.js:31:7 - testExistingEmail] Verifying existing email error message
+[test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-17T10:25:35.639Z | test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-17T12:54:18.983Z | test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-17T12:55:29.667Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:21:5 - testConfirmPassword] Filling registration form with mismatched passwords
+[test03.js:28:5 - testConfirmPassword] Submitting registration form
+[test03.js:31:5 - testConfirmPassword] Verifying password mismatch error message
+[test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-17T12:55:37.983Z | test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:21:7 - testExistingEmail] Filling registration form with existing email
+[test04.js:28:7 - testExistingEmail] Submitting registration form
+[test04.js:31:7 - testExistingEmail] Verifying existing email error message
+[test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-17T12:55:46.382Z | test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-17T13:09:35.508Z | test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-17T13:09:42.986Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:21:5 - testConfirmPassword] Filling registration form with mismatched passwords
+[test03.js:28:5 - testConfirmPassword] Submitting registration form
+[test03.js:31:5 - testConfirmPassword] Verifying password mismatch error message
+[test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-17T13:09:50.365Z | test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '21.0.8'
+Driver info: driver.version: unknown
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-17T13:09:57.129Z | test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-17T13:14:14.170Z | test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-17T13:14:22.037Z | test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:21:5 - testConfirmPassword] Filling registration form with mismatched passwords
+[test03.js:28:5 - testConfirmPassword] Submitting registration form
+[test03.js:31:5 - testConfirmPassword] Verifying password mismatch error message
+[test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-17T13:14:29.620Z | test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:21:7 - testExistingEmail] Filling registration form with existing email
+[test04.js:28:7 - testExistingEmail] Submitting registration form
+[test04.js:31:7 - testExistingEmail] Verifying existing email error message
+[test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-17T13:14:38.571Z | test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed

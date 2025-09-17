@@ -1,6 +1,6 @@
 module.exports = {
     // Application URL - can be overridden by environment variable
-    URL: process.env.APP_URL || "http://16.176.218.230/",
+    URL: process.env.APP_URL || "http://localhost:8083/",
     
     // Browser configuration
     Browser: process.env.BROWSER || "chrome",
@@ -13,6 +13,9 @@ module.exports = {
     
     // Window size for headless mode
     WindowSize: process.env.WINDOW_SIZE || "1920,1080",
+    
+    // Remote Selenium URL (e.g., http://selenium:4444/wd/hub)
+    RemoteUrl: process.env.REMOTE_URL || "",
     
     // Tour Phase Durations (in seconds)
     TOUR_PHASE_1_DURATION_SECONDS: parseInt(process.env.TOUR_PHASE_1_DURATION) || 60,  // Initial Countdown (1 minute)

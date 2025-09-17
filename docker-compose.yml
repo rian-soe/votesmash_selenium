@@ -8,48 +8,28 @@ services:
       - BROWSER=chrome
       - WINDOW_SIZE=1920,1080
       - CI=true
-      # Database configuration
-      - DB_HOST=mysql
-      - DB_USER=votesmash_user
-      - DB_PASSWORD=votesmash_password
-      - DB_NAME=votesmash
-      - DB_PORT=3306
+      - DB_DISABLED=true
       # Application URL
-      - APP_URL=http://localhost:8080
-    depends_on:
-      - mysql
+      - APP_URL=http://98.80.5.203/
+      # Point tests at Selenium Grid (standalone) inside the compose network
+      - REMOTE_URL=http://selenium:4444/wd/hub
     volumes:
       - ./test/test_results:/app/test/test_results
     networks:
       - selenium-network
 
-  mysql:
-    image: mysql:8.0
+  selenium:
+    image: selenium/standalone-chrome:latest
+    shm_size: 2g
     environment:
-      - MYSQL_ROOT_PASSWORD=root_password
-      - MYSQL_DATABASE=votesmash
-      - MYSQL_USER=votesmash_user
-      - MYSQL_PASSWORD=votesmash_password
+      - SE_NODE_MAX_SESSIONS=1
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
     ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-      - ./sql:/docker-entrypoint-initdb.d
+      - "4444:4444"
     networks:
       - selenium-network
 
-  # Optional: Web application service (if you want to test against a containerized app)
-  web-app:
-    image: nginx:alpine
-    ports:
-      - "8080:80"
-    volumes:
-      - ./web:/usr/share/nginx/html
-    networks:
-      - selenium-network
-
-volumes:
-  mysql_data:
+# Note: The 'mysql' and 'web-app' services have been removed.
 
 networks:
   selenium-network:

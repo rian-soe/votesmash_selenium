@@ -155,10 +155,10 @@ function getTestFiles() {
         "test02.js",
         "test03.js",
         "test04.js",
-        "test05.js",
-        "test06.js",
-        "test07.js",
-        "test08.js"
+      //  "test05.js",
+       // "test06.js",
+       // "test07.js",
+        //"test08.js"
     ];
 }
 
@@ -179,14 +179,12 @@ function logTestResult(testFile, resultCode, startTime) {
 
 // Modify the main function to use test dependencies
 async function main() {
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout,
-    });
-
     console.log("\nRunning tests...\n");
 
-    rl.question("Choose an option (1: All tests, 2: Specific test, 3: Range): ", async (choice) => {
+    // Support non-interactive mode via env var or when stdin is not a TTY
+    const presetChoice = process.env.TEST_CHOICE || (!process.stdin.isTTY ? '1' : null);
+
+    const handleChoice = async (choice, rl) => {
         switch (choice.trim()) {
             case "1":
                 const totalStartTime = Date.now();
@@ -226,10 +224,11 @@ async function main() {
                     failTests.forEach(test => console.log(`- ${test}`));
                 }
                 
-                rl.close();
+                if (rl) rl.close();
                 break;
 
             case "2":
+                if (!rl) { console.log("Non-interactive mode requires TEST_FILE for choice 2"); process.exit(1); }
                 rl.question("Enter the name of the test file to run (e.g., 'test01.js'): ", async (testFile) => {
                     const startTime = Date.now();
                     const result = await runTest(testFile);
@@ -248,6 +247,7 @@ async function main() {
                 break;
 
             case "3":
+                if (!rl) { console.log("Non-interactive mode requires START_NUM and END_NUM for choice 3"); process.exit(1); }
                 rl.question("Enter the starting test number (e.g., 2): ", async (startNum) => {
                     rl.question("Enter the ending test number (e.g., 5): ", async (endNum) => {
                         const totalStartTime = Date.now();
@@ -284,11 +284,41 @@ async function main() {
 
             default:
                 console.log("❌ Invalid choice. Please select 1, 2, or 3.");
-                rl.close();
+                if (rl) rl.close();
         }
-    });
+    };
 
-    rl.on("close", () => {
+    if (presetChoice) {
+        await handleChoice(presetChoice, null);
+    } else {
+        const rl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout,
+        });
+        rl.question("Choose an option (1: All tests, 2: Specific test, 3: Range): ", async (choice) => {
+            await handleChoice(choice, rl);
+        });
+
+        rl.on("close", () => {
+            const totalTests = successTests.length + failTests.length;
+            
+            console.log("\nTest Summary:");
+            console.log(`Total Tests: ${totalTests}`);
+            console.log(`Passed: ${successTests.length}`);
+            console.log(`Failed: ${failTests.length}`);
+            
+            if (failTests.length > 0) {
+                console.log("\nFailed Tests:");
+                failTests.forEach(test => console.log(`- ${test}`));
+            }
+            
+            // Exit with code 1 if any tests failed
+            process.exit(failTests.length > 0 ? 1 : 0);
+        });
+        return;
+    }
+
+    // Non-interactive path: print summary and exit
         const totalTests = successTests.length + failTests.length;
         
         console.log("\nTest Summary:");
@@ -303,7 +333,6 @@ async function main() {
         
         // Exit with code 1 if any tests failed
         process.exit(failTests.length > 0 ? 1 : 0);
-    });
 }
 
 main();

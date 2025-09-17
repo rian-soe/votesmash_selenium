@@ -4,9 +4,10 @@
   "description": "Selenium WebDriver tests for VoteSmash application",
   "main": "test/runAllTest.js",
   "scripts": {
-    "test": "mocha test/*.js",
-    "test:headless": "HEADLESS=true npm test",
-    "test:ci": "CI=true HEADLESS=true npm test",
+    "test": "node test/runAllTest.js",
+    "test:headless": "HEADLESS=true TEST_CHOICE=1 node test/runAllTest.js",
+    "test:ci": "CI=true HEADLESS=true TEST_CHOICE=1 node test/runAllTest.js",
+    "test:all": "TEST_CHOICE=1 node test/runAllTest.js",
     "test:single": "node test/runAllTest.js",
     "test:docker": "docker-compose up --build --abort-on-container-exit",
     "test:docker:clean": "docker-compose down -v && docker-compose up --build --abort-on-container-exit",

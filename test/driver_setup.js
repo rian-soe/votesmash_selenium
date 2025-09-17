@@ -4,7 +4,10 @@ const firefox = require('selenium-webdriver/firefox');
 const config = require('../config/config');
 
 async function setupDriver(browserName) {
-  let builder = new Builder().forBrowser(browserName);
+  // Use remote Selenium if REMOTE_URL is provided; otherwise, local
+  let builder = config.RemoteUrl
+    ? new Builder().usingServer(config.RemoteUrl).forBrowser(browserName)
+    : new Builder().forBrowser(browserName);
 
   if (browserName === 'chrome') {
     const options = new chrome.Options();
