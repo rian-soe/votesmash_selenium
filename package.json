@@ -2,20 +2,25 @@
   "name": "selenium_js",
   "version": "1.0.0",
   "description": "Selenium WebDriver tests for VoteSmash application",
-  "main": "test/runAllTest.js",
+  "main": "runAllTests.js",
   "scripts": {
-    "test": "node test/runAllTest.js",
-    "test:headless": "HEADLESS=true TEST_CHOICE=1 node test/runAllTest.js",
-    "test:ci": "CI=true HEADLESS=true TEST_CHOICE=1 node test/runAllTest.js",
-    "test:all": "TEST_CHOICE=1 node test/runAllTest.js",
-    "test:single": "node test/runAllTest.js",
+    "test": "node runAllTests.js",                       
+    "test:headless": "HEADLESS=true node runAllTests.js", 
+    "test:ci": "CI=true HEADLESS=true node runAllTests.js", 
     "test:docker": "docker-compose up --build --abort-on-container-exit",
     "test:docker:clean": "docker-compose down -v && docker-compose up --build --abort-on-container-exit",
-    "start": "node test/runAllTest.js",
+    "start": "node runAllTests.js",
     "lint": "eslint . --ext .js",
     "lint:fix": "eslint . --ext .js --fix"
   },
-  "keywords": ["selenium", "webdriver", "testing", "automation", "ci-cd"],
+
+  "keywords": [
+    "selenium",
+    "webdriver",
+    "testing",
+    "automation",
+    "ci-cd"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
@@ -23,12 +28,12 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "mocha": "^11.1.0",
     "mysql2": "^3.14.1",
     "selenium-webdriver": "^4.30.0",
     "tunnel-ssh": "^5.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.0",
+    "mocha": "^11.7.2"
   }
 }

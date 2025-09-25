@@ -14,7 +14,7 @@ services:
       # Point tests at Selenium Grid (standalone) inside the compose network
       - REMOTE_URL=http://selenium:4444/wd/hub
     volumes:
-      - ./test/test_results:/app/test/test_results
+      - ./reports/test_results:/app/reports/test_results:rw
     networks:
       - selenium-network
 

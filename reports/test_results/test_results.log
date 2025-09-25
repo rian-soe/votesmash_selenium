@@ -1,0 +1,638 @@
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: ETIMEDOUT connect ETIMEDOUT 172.20.0.2:4444
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T09:18:23.251Z | test/test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:44:5 - testRegisterPassword] ❌ Test execution failed
+[test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T09:18:23.547Z | test/test02.js | Failure | [test02.js:44:5 - testRegisterPassword] ❌ Test execution failed | [test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T09:18:23.848Z | test/test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T09:18:24.288Z | test/test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-24T09:49:15.007Z | test/test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-24T09:50:25.022Z | test/test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:21:5 - testConfirmPassword] Filling registration form with mismatched passwords
+[test03.js:28:5 - testConfirmPassword] Submitting registration form
+[test03.js:31:5 - testConfirmPassword] Verifying password mismatch error message
+[test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-24T09:50:33.234Z | test/test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:21:7 - testExistingEmail] Filling registration form with existing email
+[test04.js:28:7 - testExistingEmail] Submitting registration form
+[test04.js:31:7 - testExistingEmail] Verifying existing email error message
+[test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-24T09:50:41.645Z | test/test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:123:5 - testTourCreate] ❌ ETIMEDOUT connect ETIMEDOUT 172.20.0.2:4444
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:137:5 - testTourCreate] ❌ element not interactable
+  (Session info: chrome=140.0.7339.128)
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:137:5 - testTourCreate] ❌ element not interactable
+  (Session info: chrome=140.0.7339.128)
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:137:5 - testTourCreate] ❌ element not interactable
+  (Session info: chrome=140.0.7339.128)
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:79:5 - testTourCreate] Filling dynamic question and options
+[test05.js:96:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:99:5 - testTourCreate] Submitting tour form
+[test05.js:107:5 - testTourCreate] Verifying tour creation
+[test05.js:139:5 - testTourCreate] ❌ Waiting for element to be located By(xpath, //*[contains(text(), 'Ready to reimage your diversity & equality platform?')])
+Wait timed out after 10200ms
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:79:5 - testTourCreate] Filling dynamic question and options
+[test05.js:96:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:99:5 - testTourCreate] Submitting tour form
+[test05.js:107:5 - testTourCreate] Verifying tour creation
+[test05.js:139:5 - testTourCreate] ❌ Waiting for element to be located By(xpath, //*[contains(text(), 'Ready to reimage your diversity & equality platform?')])
+Wait timed out after 10108ms
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:139:5 - testTourCreate] ❌ no such element: Unable to locate element: {"method":"css selector","selector":"*[id="title"]"}
+  (Session info: chrome=140.0.7339.128)
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:79:5 - testTourCreate] Filling dynamic question and options
+[test05.js:96:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:99:5 - testTourCreate] Submitting tour form
+[test05.js:107:5 - testTourCreate] Verifying tour creation
+[test05.js:139:5 - testTourCreate] ❌ Waiting for element to be located By(xpath, //*[contains(text(), 'Are you ready to go on a challenge & consensus tour?')])
+Wait timed out after 10080ms
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:79:5 - testTourCreate] Filling dynamic question and options
+[test05.js:96:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:99:5 - testTourCreate] Submitting tour form
+[test05.js:107:5 - testTourCreate] Verifying tour creation
+[test05.js:142:5 - testTourCreate] ❌ Waiting until element text contains
+Wait timed out after 15152ms
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:79:5 - testTourCreate] Filling dynamic question and options
+[test05.js:96:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:99:5 - testTourCreate] Submitting tour form
+[test05.js:107:5 - testTourCreate] Verifying tour creation
+[test05.js:142:5 - testTourCreate] ❌ Waiting until element text contains
+Wait timed out after 15100ms
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:64:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:67:5 - testTourCreate] Adding media and options
+[test05.js:79:5 - testTourCreate] Filling dynamic question and options
+[test05.js:96:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:99:5 - testTourCreate] Submitting tour form
+[test05.js:107:5 - testTourCreate] Verifying tour creation
+[test05.js:142:5 - testTourCreate] ❌ Waiting until element text contains
+Wait timed out after 15026ms
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:75:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:78:5 - testTourCreate] Adding media and options
+[test05.js:90:5 - testTourCreate] Filling dynamic question and options
+[test05.js:107:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:110:5 - testTourCreate] Submitting tour form
+[test05.js:118:5 - testTourCreate] Verifying tour creation
+[test05.js:123:5 - testTourCreate] ✅ Tour creation verified
+[test05.js:153:5 - testTourCreate] ❌ element is not defined
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:75:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:78:5 - testTourCreate] Adding media and options
+[test05.js:90:5 - testTourCreate] Filling dynamic question and options
+[test05.js:107:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:110:5 - testTourCreate] Submitting tour form
+[test05.js:118:5 - testTourCreate] Verifying tour creation
+[test05.js:123:5 - testTourCreate] ✅ Tour creation verified
+[test05.js:175:5 - testTourCreate] ❌ element is not defined
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:75:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:78:5 - testTourCreate] Adding media and options
+[test05.js:90:5 - testTourCreate] Filling dynamic question and options
+[test05.js:107:5 - testTourCreate] ✅ Media and options added successfully
+[test05.js:110:5 - testTourCreate] Submitting tour form
+[test05.js:118:5 - testTourCreate] Verifying tour creation
+[test05.js:123:5 - testTourCreate] ✅ Tour creation verified
+[test05.js:126:5 - testTourCreate] Filtering tour list to 'Active'
+[test05.js:137:5 - testTourCreate] Verifying tour in active list
+[test05.js:152:5 - testTourCreate] ✅ Tour found in active list
+[test05.js:157:5 - testTourCreate] Verifying tour details page
+[test05.js:164:5 - testTourCreate] ✅ Tour details page verified
+[test05.js:166:5 - testTourCreate] ✅ Tour creation test completed successfully
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:13:5 - testInvalidDate] Navigating to application URL
+[test06.js:17:5 - testInvalidDate] Logging in with valid credentials
+[test06.js:24:5 - testInvalidDate] Navigating to Add Tour page via dropdown
+[test06.js:39:5 - testInvalidDate] Filling tour details
+[test06.js:71:5 - testInvalidDate] Uploading cover image
+[test06.js:123:5 - testInvalidDate] ❌ Test execution failed
+[test06.js:123:5 - testInvalidDate] Error: invalid argument: File not found : C:\Users\Administrator\Pictures\Screenshots\p3.png
+  (Session info: chrome=140.0.7339.128)
+[test06.js:126:7 - testInvalidDate] Closing WebDriver
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:13:5 - testInvalidDate] Navigating to application URL
+[test06.js:17:5 - testInvalidDate] Logging in with valid credentials
+[test06.js:24:5 - testInvalidDate] Navigating to Add Tour page via dropdown
+[test06.js:39:5 - testInvalidDate] Filling tour details
+[test06.js:71:5 - testInvalidDate] Uploading cover image
+[test06.js:75:5 - testInvalidDate] Adding video and event links
+[test06.js:82:5 - testInvalidDate] Filling dynamic question and options
+[test06.js:96:5 - testInvalidDate] Submitting tour form
+[test06.js:103:5 - testInvalidDate] Verifying date validation error
+[test06.js:123:5 - testInvalidDate] ❌ Test execution failed
+[test06.js:123:5 - testInvalidDate] Error: Waiting for element to be located By(xpath, //input[@id='tour_date']/following-sibling::div[contains(@class, 'invalid-feedback')])
+Wait timed out after 10215ms
+[test06.js:126:7 - testInvalidDate] Closing WebDriver
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:13:5 - testInvalidDate] Navigating to application URL
+[test06.js:17:5 - testInvalidDate] Logging in with valid credentials
+[test06.js:24:5 - testInvalidDate] Navigating to Add Tour page via dropdown
+[test06.js:39:5 - testInvalidDate] Filling tour details
+[test06.js:135:5 - testInvalidDate] ❌ Test execution failed
+[test06.js:135:5 - testInvalidDate] Error: no such element: Unable to locate element: {"method":"css selector","selector":"*[id="title"]"}
+  (Session info: chrome=140.0.7339.128)
+[test06.js:138:7 - testInvalidDate] Closing WebDriver
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:13:5 - testInvalidDate] Navigating to application URL
+[test06.js:17:5 - testInvalidDate] Logging in with valid credentials
+[test06.js:24:5 - testInvalidDate] Navigating to Add Tour page via dropdown
+[test06.js:39:5 - testInvalidDate] Filling tour details
+[test06.js:71:5 - testInvalidDate] Uploading cover image
+[test06.js:75:5 - testInvalidDate] Adding video and event links
+[test06.js:82:5 - testInvalidDate] Filling dynamic question and options
+[test06.js:96:5 - testInvalidDate] Submitting tour form
+[test06.js:103:5 - testInvalidDate] Verifying date validation error
+[test06.js:135:5 - testInvalidDate] ❌ Test execution failed
+[test06.js:135:5 - testInvalidDate] Error: Waiting for element to be located By(xpath, //*[contains(@class, 'invalid-feedback') and contains(text(), '5 hours')])
+Wait timed out after 10201ms
+[test06.js:138:7 - testInvalidDate] Closing WebDriver
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:13:5 - testInvalidDate] Navigating to application URL
+[test06.js:17:5 - testInvalidDate] Logging in with valid credentials
+[test06.js:24:5 - testInvalidDate] Navigating to Add Tour page via dropdown
+[test06.js:39:5 - testInvalidDate] Filling tour details
+[test06.js:71:5 - testInvalidDate] Uploading cover image
+[test06.js:75:5 - testInvalidDate] Adding video and event links
+[test06.js:82:5 - testInvalidDate] Filling dynamic question and options
+[test06.js:96:5 - testInvalidDate] Submitting tour form
+[test06.js:103:5 - testInvalidDate] Verifying date validation error
+[test06.js:120:7 - testInvalidDate] ✅ Expected error message 'The tour must start at least 5 hours from now.' was displayed
+[test06.js:129:7 - testInvalidDate] ℹ️ Validation error 1: The tour must start at least 5 hours from now.
+[test06.js:138:7 - testInvalidDate] Closing WebDriver
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:13:5 - testInvalidDate] Navigating to application URL
+[test06.js:17:5 - testInvalidDate] Logging in with valid credentials
+[test06.js:24:5 - testInvalidDate] Navigating to Add Tour page via dropdown
+[test06.js:39:5 - testInvalidDate] Filling tour details
+[test06.js:71:5 - testInvalidDate] Uploading cover image
+[test06.js:75:5 - testInvalidDate] Adding video and event links
+[test06.js:82:5 - testInvalidDate] Filling dynamic question and options
+[test06.js:96:5 - testInvalidDate] Submitting tour form
+[test06.js:103:5 - testInvalidDate] Verifying date validation error
+[test06.js:120:7 - testInvalidDate] ✅ Expected error message 'The tour must start at least 5 hours from now.' was displayed
+[test06.js:129:7 - testInvalidDate] ℹ️ Validation error 1: The tour must start at least 5 hours from now.
+[test06.js:138:7 - testInvalidDate] Closing WebDriver
+[test08.js:9:9 - testTourListActions] Setting up WebDriver
+[test08.js:12:9 - testTourListActions] Navigating to homepage
+[test08.js:17:9 - testTourListActions] Logging in with valid credentials
+[test08.js:22:9 - testTourListActions] ✅ Login successful
+[test08.js:25:9 - testTourListActions] Navigating to Tour List
+[test08.js:30:9 - testTourListActions] Clicking pagination links
+[test08.js:78:9 - testTourListActions] ❌ element click intercepted: Element is not clickable at point (1108, 837)
+  (Session info: chrome=140.0.7339.128)
+[test08.js:24:5 - testTourListActions] Setting up WebDriver
+[test08.js:27:5 - testTourListActions] Navigating to homepage
+[test08.js:32:5 - testTourListActions] Logging in with valid credentials
+[test08.js:37:5 - testTourListActions] ✅ Login successful
+[test08.js:7:3 - goToTourList] Navigating to Tour List via dropdown
+[test08.js:44:5 - testTourListActions] Clicking pagination links
+[test08.js:102:5 - testTourListActions] ❌ element click intercepted: Element is not clickable at point (1108, 837)
+  (Session info: chrome=140.0.7339.128)
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination links
+[test08.js:102:5 - testTourListActions] ❌ element click intercepted: Element is not clickable at point (1108, 837)
+  (Session info: chrome=140.0.7339.128)
+[test08.js:105:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination links
+[test08.js:111:5 - testTourListActions] ❌ pageLink is not defined
+[test08.js:114:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination links
+[test08.js:111:5 - testTourListActions] ❌ pageLink is not defined
+[test08.js:114:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination links
+[test08.js:111:5 - testTourListActions] ❌ pageLink is not defined
+[test08.js:114:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination links
+[test08.js:111:5 - testTourListActions] ❌ no such element: Unable to locate element: {"method":"link text","selector":"1"}
+  (Session info: chrome=140.0.7339.128)
+[test08.js:114:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:42:5 - testTourListActions] Clicking pagination link to page 2
+[test08.js:114:5 - testTourListActions] ❌ element click intercepted: Element is not clickable at point (1141, 837)
+  (Session info: chrome=140.0.7339.128)
+[test08.js:117:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:42:5 - testTourListActions] Clicking pagination link to page 2
+[test08.js:114:5 - testTourListActions] ❌ element click intercepted: Element is not clickable at point (1141, 831)
+  (Session info: chrome=140.0.7339.128)
+[test08.js:117:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination link to page 1
+[test08.js:118:5 - testTourListActions] ❌ Waiting for element to be located By(xpath, //a[@class='page-link' and text()='1'])
+Wait timed out after 10027ms
+[test08.js:121:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination link to page 1
+[test08.js:54:5 - testTourListActions] Clicking pagination link to page 1
+[test08.js:66:5 - testTourListActions] Performing actions on first tour item
+[test08.js:74:5 - testTourListActions] Viewing tour details
+[test08.js:118:5 - testTourListActions] ❌ stale element reference: stale element not found
+  (Session info: chrome=140.0.7339.128)
+[test08.js:121:7 - testTourListActions] Closing WebDriver
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination link to page 1
+[test08.js:54:5 - testTourListActions] Clicking pagination link to page 1
+[test08.js:66:5 - testTourListActions] Performing actions on first tour item
+[test08.js:74:5 - testTourListActions] Viewing tour details
+[test08.js:118:5 - testTourListActions] ❌ stale element reference: stale element not found
+  (Session info: chrome=140.0.7339.128)
+[test08.js:121:7 - testTourListActions] Closing WebDriver
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:13:5 - testCompletedTourResult] Navigating to homepage
+[test09.js:17:5 - testCompletedTourResult] Logging in with valid credentials
+[test09.js:22:5 - testCompletedTourResult] ✅ Login successful
+[test09.js:24:5 - testCompletedTourResult] Navigating to Tour List via dropdown
+[test09.js:33:5 - testCompletedTourResult] Clicking Completed button on first tour
+[test09.js:39:5 - testCompletedTourResult] Verifying result table on completed tour page
+[test09.js:51:5 - testCompletedTourResult] ✅ Completed tour result table verified with correct headers
+[test09.js:57:7 - testCompletedTourResult] Closing WebDriver
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:13:5 - testCompletedTourResult] Navigating to homepage
+[test09.js:17:5 - testCompletedTourResult] Logging in with valid credentials
+[test09.js:22:5 - testCompletedTourResult] ✅ Login successful
+[test09.js:24:5 - testCompletedTourResult] Navigating to Tour List via dropdown
+[test09.js:33:5 - testCompletedTourResult] Clicking Completed button on first tour
+[test09.js:54:5 - testCompletedTourResult] ❌ Waiting for URL to contain "/admin/tour/"
+Wait timed out after 10174ms
+[test09.js:57:7 - testCompletedTourResult] Closing WebDriver
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:13:5 - testCompletedTourResult] Navigating to homepage
+[test09.js:17:5 - testCompletedTourResult] Logging in with valid credentials
+[test09.js:22:5 - testCompletedTourResult] ✅ Login successful
+[test09.js:24:5 - testCompletedTourResult] Navigating to Tour List via dropdown
+[test09.js:33:5 - testCompletedTourResult] Clicking Completed button on first tour
+[test09.js:39:5 - testCompletedTourResult] Verifying result table on completed tour page
+[test09.js:51:5 - testCompletedTourResult] ✅ Completed tour result table verified with correct headers
+[test09.js:57:7 - testCompletedTourResult] Closing WebDriver
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:13:5 - testCompletedTourResult] Navigating to homepage
+[test09.js:17:5 - testCompletedTourResult] Logging in with valid credentials
+[test09.js:22:5 - testCompletedTourResult] ✅ Login successful
+[test09.js:24:5 - testCompletedTourResult] Navigating to Tour List via dropdown
+[test09.js:33:5 - testCompletedTourResult] Clicking Completed button on first tour
+[test09.js:54:5 - testCompletedTourResult] ❌ Waiting for URL to contain "/admin/tour/"
+Wait timed out after 10132ms
+[test09.js:57:7 - testCompletedTourResult] Closing WebDriver
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:13:5 - testCompletedTourResult] Navigating to homepage
+[test09.js:17:5 - testCompletedTourResult] Logging in with valid credentials
+[test09.js:22:5 - testCompletedTourResult] ✅ Login successful
+[test09.js:24:5 - testCompletedTourResult] Navigating to Tour List via dropdown
+[test09.js:33:5 - testCompletedTourResult] Clicking Completed button on first tour
+[test09.js:54:5 - testCompletedTourResult] ❌ Waiting for URL to contain "/admin/tour/"
+Wait timed out after 10167ms
+[test09.js:57:7 - testCompletedTourResult] Closing WebDriver
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:13:5 - testCompletedTourResult] Navigating to homepage
+[test09.js:17:5 - testCompletedTourResult] Logging in with valid credentials
+[test09.js:22:5 - testCompletedTourResult] ✅ Login successful
+[test09.js:24:5 - testCompletedTourResult] Navigating to Tour List via dropdown
+[test09.js:33:5 - testCompletedTourResult] Searching for a visible Completed button
+[test09.js:48:5 - testCompletedTourResult] Clicking Completed button for tour ID 7
+[test09.js:53:5 - testCompletedTourResult] Verifying result table on completed tour page
+[test09.js:65:5 - testCompletedTourResult] ✅ Completed tour result table verified for tour ID 7
+[test09.js:71:7 - testCompletedTourResult] Closing WebDriver
+[test10.js:10:5 - testActiveTourDetail] Setting up WebDriver
+[test10.js:13:5 - testActiveTourDetail] Navigating to homepage
+[test10.js:17:5 - testActiveTourDetail] Logging in with valid credentials
+[test10.js:22:5 - testActiveTourDetail] ✅ Login successful
+[test10.js:24:5 - testActiveTourDetail] Navigating to Tour List via dropdown
+[test10.js:29:5 - testActiveTourDetail] Clicking Active filter
+[test10.js:42:5 - testActiveTourDetail] Searching for a visible Active button
+[test10.js:73:5 - testActiveTourDetail] ❌ No visible Active button found
+[test10.js:76:7 - testActiveTourDetail] Closing WebDriver
+[test10.js:10:5 - testActiveTourDetail] Setting up WebDriver
+[test10.js:13:5 - testActiveTourDetail] Navigating to homepage
+[test10.js:17:5 - testActiveTourDetail] Logging in with valid credentials
+[test10.js:22:5 - testActiveTourDetail] ✅ Login successful
+[test10.js:24:5 - testActiveTourDetail] Navigating to Tour List via dropdown
+[test10.js:29:5 - testActiveTourDetail] Clicking Active filter
+[test10.js:42:5 - testActiveTourDetail] Searching for a visible Active button
+[test10.js:73:5 - testActiveTourDetail] ❌ No visible Active button found
+[test10.js:76:7 - testActiveTourDetail] Closing WebDriver
+[test10.js:10:5 - testActiveTourDetail] Setting up WebDriver
+[test10.js:13:5 - testActiveTourDetail] Navigating to homepage
+[test10.js:17:5 - testActiveTourDetail] Logging in with valid credentials
+[test10.js:22:5 - testActiveTourDetail] ✅ Login successful
+[test10.js:24:5 - testActiveTourDetail] Navigating to Tour List via dropdown
+[test10.js:29:5 - testActiveTourDetail] Clicking Active filter
+[test10.js:42:5 - testActiveTourDetail] Searching for a visible Active button
+[test10.js:73:5 - testActiveTourDetail] ❌ No visible Active button found
+[test10.js:76:7 - testActiveTourDetail] Closing WebDriver
+[test10.js:10:5 - testActiveTourDetail] Setting up WebDriver
+[test10.js:13:5 - testActiveTourDetail] Navigating to homepage
+[test10.js:17:5 - testActiveTourDetail] Logging in with valid credentials
+[test10.js:22:5 - testActiveTourDetail] ✅ Login successful
+[test10.js:24:5 - testActiveTourDetail] Navigating to Tour List via dropdown
+[test10.js:29:5 - testActiveTourDetail] Clicking Active filter
+[test10.js:45:5 - testActiveTourDetail] Searching for a visible Active button
+[test10.js:60:5 - testActiveTourDetail] Clicking Active button for tour ID 20
+[test10.js:65:5 - testActiveTourDetail] Verifying tour detail page content
+[test10.js:73:5 - testActiveTourDetail] ✅ Active tour detail page verified for tour ID 20
+[test10.js:79:7 - testActiveTourDetail] Closing WebDriver
+[test10.js:10:5 - testActiveTourDetail] Setting up WebDriver
+[test10.js:13:5 - testActiveTourDetail] Navigating to homepage
+[test10.js:17:5 - testActiveTourDetail] Logging in with valid credentials
+[test10.js:22:5 - testActiveTourDetail] ✅ Login successful
+[test10.js:24:5 - testActiveTourDetail] Navigating to Tour List via dropdown
+[test10.js:29:5 - testActiveTourDetail] Clicking Active filter
+[test10.js:45:5 - testActiveTourDetail] Searching for a visible Active button
+[test10.js:60:5 - testActiveTourDetail] Clicking Active button for tour ID 20
+[test10.js:65:5 - testActiveTourDetail] Verifying tour detail page content
+[test10.js:73:5 - testActiveTourDetail] ✅ Active tour detail page verified for tour ID 20
+[test10.js:79:7 - testActiveTourDetail] Closing WebDriver
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:42:5 - testLoginFail] ❌ Test execution failed
+[test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:48.548Z | test/test01.js | Failure | [test01.js:42:5 - testLoginFail] ❌ Test execution failed | [test01.js:42:5 - testLoginFail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:44:5 - testRegisterPassword] ❌ Test execution failed
+[test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:49.061Z | test/test02.js | Failure | [test02.js:44:5 - testRegisterPassword] ❌ Test execution failed | [test02.js:44:5 - testRegisterPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:44:5 - testConfirmPassword] ❌ Test execution failed
+[test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:49.611Z | test/test03.js | Failure | [test03.js:44:5 - testConfirmPassword] ❌ Test execution failed | [test03.js:44:5 - testConfirmPassword] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:44:7 - testExistingEmail] ❌ Test execution failed
+[test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:50.254Z | test/test04.js | Failure | [test04.js:44:7 - testExistingEmail] ❌ Test execution failed | [test04.js:44:7 - testExistingEmail] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:169:5 - testTourCreate] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:50.879Z | test/test05.js | Failure | [test05.js:169:5 - testTourCreate] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:135:5 - testInvalidDate] ❌ Test execution failed
+[test06.js:135:5 - testInvalidDate] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:51.318Z | test/test06.js | Failure | [test06.js:135:5 - testInvalidDate] ❌ Test execution failed | [test06.js:135:5 - testInvalidDate] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test07.js:10:5 - testBuyTour] Setting up WebDriver
+[test07.js:102:5 - testBuyTour] ❌ Test execution failed
+[test07.js:102:5 - testBuyTour] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:51.709Z | test/test07.js | Failure | [test07.js:102:5 - testBuyTour] ❌ Test execution failed | [test07.js:102:5 - testBuyTour] Error: ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:122:5 - testTourListActions] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:52.074Z | test/test08.js | Failure | [test08.js:122:5 - testTourListActions] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:68:5 - testCompletedTourResult] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:52.461Z | test/test09.js | Failure | [test09.js:68:5 - testCompletedTourResult] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test10.js:10:5 - testActiveTourDetail] Setting up WebDriver
+[test10.js:76:5 - testActiveTourDetail] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+2025-09-24T16:20:52.931Z | test/test10.js | Failure | [test10.js:76:5 - testActiveTourDetail] ❌ ECONNREFUSED connect ECONNREFUSED 172.20.0.2:4444
+[test01.js:11:5 - testLoginFail] Setting up WebDriver
+[test01.js:14:5 - testLoginFail] Navigating to application URL
+[test01.js:18:5 - testLoginFail] Attempting to login with invalid credentials
+[test01.js:26:5 - testLoginFail] Submitting login form
+[test01.js:29:5 - testLoginFail] Verifying error message
+[test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test01.js:45:7 - testLoginFail] Closing WebDriver
+2025-09-24T16:21:35.210Z | test/test01.js | Success | [test01.js:36:7 - testLoginFail] ✅ Expected error message 'These credentials do not match our records.' was displayed
+[test02.js:11:5 - testRegisterPassword] Setting up WebDriver
+[test02.js:14:5 - testRegisterPassword] Navigating to application URL
+[test02.js:18:5 - testRegisterPassword] Navigating to Sign Up page
+[test02.js:21:5 - testRegisterPassword] Filling registration form with short password
+[test02.js:28:5 - testRegisterPassword] Submitting registration form
+[test02.js:31:5 - testRegisterPassword] Verifying password length error message
+[test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test02.js:47:7 - testRegisterPassword] Closing WebDriver
+2025-09-24T16:21:50.097Z | test/test02.js | Success | [test02.js:38:7 - testRegisterPassword] ✅ Expected error message 'The password field must be at least 8 characters.' was displayed
+[test03.js:11:5 - testConfirmPassword] Setting up WebDriver
+[test03.js:14:5 - testConfirmPassword] Navigating to application URL
+[test03.js:18:5 - testConfirmPassword] Navigating to Sign Up page
+[test03.js:21:5 - testConfirmPassword] Filling registration form with mismatched passwords
+[test03.js:28:5 - testConfirmPassword] Submitting registration form
+[test03.js:31:5 - testConfirmPassword] Verifying password mismatch error message
+[test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test03.js:47:7 - testConfirmPassword] Closing WebDriver
+2025-09-24T16:22:59.373Z | test/test03.js | Success | [test03.js:38:7 - testConfirmPassword] ✅ Expected error message 'The password field confirmation does not match.' was displayed
+[test04.js:11:7 - testExistingEmail] Setting up WebDriver
+[test04.js:14:7 - testExistingEmail] Navigating to application URL
+[test04.js:18:7 - testExistingEmail] Navigating to Sign Up page
+[test04.js:21:7 - testExistingEmail] Filling registration form with existing email
+[test04.js:28:7 - testExistingEmail] Submitting registration form
+[test04.js:31:7 - testExistingEmail] Verifying existing email error message
+[test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test04.js:47:9 - testExistingEmail] Closing WebDriver
+2025-09-24T16:24:12.030Z | test/test04.js | Success | [test04.js:38:9 - testExistingEmail] ✅ Expected error message 'The email has already been taken.' was displayed
+[test05.js:10:5 - testTourCreate] Starting tour creation test
+[test05.js:16:5 - testTourCreate] Logging in with valid credentials
+[test05.js:22:5 - testTourCreate] ✅ Login successful
+[test05.js:25:1 - testTourCreate] Navigating to Add Tour page via dropdown
+[test05.js:45:5 - testTourCreate] Filling tour details
+[test05.js:75:5 - testTourCreate] ✅ Tour details filled successfully
+[test05.js:78:5 - testTourCreate] Adding media and options
+[test05.js:169:5 - testTourCreate] ❌ invalid argument: File not found : C:\Users\riansoe\Pictures\RianSoe.png
+  (Session info: chrome=140.0.7339.80)
+2025-09-24T16:24:24.656Z | test/test05.js | Failure | [test05.js:169:5 - testTourCreate] ❌ invalid argument: File not found : C:\Users\riansoe\Pictures\RianSoe.png
+[test06.js:10:5 - testInvalidDate] Setting up WebDriver
+[test06.js:13:5 - testInvalidDate] Navigating to application URL
+[test06.js:17:5 - testInvalidDate] Logging in with valid credentials
+[test06.js:24:5 - testInvalidDate] Navigating to Add Tour page via dropdown
+[test06.js:39:5 - testInvalidDate] Filling tour details
+[test06.js:135:5 - testInvalidDate] ❌ Test execution failed
+[test06.js:135:5 - testInvalidDate] Error: element click intercepted: Element is not clickable at point (206, 546)
+  (Session info: chrome=140.0.7339.80)
+[test06.js:138:7 - testInvalidDate] Closing WebDriver
+2025-09-24T16:24:38.821Z | test/test06.js | Failure | [test06.js:135:5 - testInvalidDate] ❌ Test execution failed | [test06.js:135:5 - testInvalidDate] Error: element click intercepted: Element is not clickable at point (206, 546)
+[test07.js:10:5 - testBuyTour] Setting up WebDriver
+[test07.js:13:5 - testBuyTour] Navigating to application URL
+[test07.js:17:5 - testBuyTour] Navigating to login page
+[test07.js:21:5 - testBuyTour] Entering login credentials
+[test07.js:28:5 - testBuyTour] Submitting login form
+[test07.js:31:5 - testBuyTour] Verifying successful login
+[test07.js:38:7 - testBuyTour] ✅ Successfully logged in
+[test07.js:44:5 - testBuyTour] Navigating to Tours page
+[test07.js:102:5 - testBuyTour] ❌ Test execution failed
+[test07.js:102:5 - testBuyTour] Error: Waiting for element to be located By(link text, Tours)
+Wait timed out after 10011ms
+[test07.js:105:7 - testBuyTour] Closing WebDriver
+2025-09-24T16:26:00.097Z | test/test07.js | Failure | [test07.js:102:5 - testBuyTour] ❌ Test execution failed | [test07.js:102:5 - testBuyTour] Error: Waiting for element to be located By(link text, Tours)
+[test08.js:10:5 - testTourListActions] Setting up WebDriver
+[test08.js:13:5 - testTourListActions] Navigating to homepage
+[test08.js:18:5 - testTourListActions] Logging in with valid credentials
+[test08.js:23:5 - testTourListActions] ✅ Login successful
+[test08.js:26:5 - testTourListActions] Navigating to Tour List via dropdown
+[test08.js:43:5 - testTourListActions] Clicking pagination link to page 2
+[test08.js:54:5 - testTourListActions] Clicking back to pagination link to page 1
+[test08.js:66:5 - testTourListActions] Performing actions on first tour item
+[test08.js:73:5 - testTourListActions] Viewing tour details
+[test08.js:122:5 - testTourListActions] ❌ no such element: Unable to locate element: {"method":"css selector","selector":".bi-eye-fill"}
+  (Session info: chrome=140.0.7339.80)
+[test08.js:125:7 - testTourListActions] Closing WebDriver
+2025-09-24T16:26:13.646Z | test/test08.js | Failure | [test08.js:122:5 - testTourListActions] ❌ no such element: Unable to locate element: {"method":"css selector","selector":".bi-eye-fill"}
+[test09.js:10:5 - testCompletedTourResult] Setting up WebDriver
+[test09.js:13:5 - testCompletedTourResult] Navigating to homepage
+[test09.js:17:5 - testCompletedTourResult] Logging in with valid credentials
+[test09.js:22:5 - testCompletedTourResult] ✅ Login successful
+[test09.js:24:5 - testCompletedTourResult] Navigating to Tour List via dropdown
+[test09.js:33:5 - testCompletedTourResult] Searching for a visible Completed button
+[test09.js:48:5 - testCompletedTourResult] Clicking Completed button for tour ID 7
+[test09.js:53:5 - testCompletedTourResult] Verifying result table on completed tour page
+[test09.js:65:5 - testCompletedTourResult] ✅ Completed tour result table verified for tour ID 7
+[test09.js:71:7 - testCompletedTourResult] Closing WebDriver
+2025-09-24T16:26:22.622Z | test/test09.js | Success | [test09.js:22:5 - testCompletedTourResult] ✅ Login successful | [test09.js:65:5 - testCompletedTourResult] ✅ Completed tour result table verified for tour ID 7
+[test10.js:10:5 - testActiveTourDetail] Setting up WebDriver
+[test10.js:13:5 - testActiveTourDetail] Navigating to homepage
+[test10.js:17:5 - testActiveTourDetail] Logging in with valid credentials
+[test10.js:22:5 - testActiveTourDetail] ✅ Login successful
+[test10.js:24:5 - testActiveTourDetail] Navigating to Tour List via dropdown
+[test10.js:29:5 - testActiveTourDetail] Clicking Active filter
+[test10.js:45:5 - testActiveTourDetail] Searching for a visible Active button
+[test10.js:60:5 - testActiveTourDetail] Clicking Active button for tour ID 20
+[test10.js:65:5 - testActiveTourDetail] Verifying tour detail page content
+[test10.js:73:5 - testActiveTourDetail] ✅ Active tour detail page verified for tour ID 20
+[test10.js:79:7 - testActiveTourDetail] Closing WebDriver
+2025-09-24T16:26:34.996Z | test/test10.js | Success | [test10.js:22:5 - testActiveTourDetail] ✅ Login successful | [test10.js:73:5 - testActiveTourDetail] ✅ Active tour detail page verified for tour ID 20

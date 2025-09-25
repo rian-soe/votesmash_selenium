@@ -1,7 +1,7 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const config = require('../config/config');
-const setupDriver = require('./driver_setup');
-const { logStep, logSuccess, logFailure, logInfo } = require('./test_utils');
+const setupDriver = require('../utils/driver_setup');
+const { logStep, logSuccess, logFailure, logInfo } = require('../utils/test_utils');
 
 async function testInvalidDate() {
   let driver;
@@ -21,8 +21,20 @@ async function testInvalidDate() {
     await driver.findElement(By.id("password")).sendKeys("james123");
     await driver.findElement(By.css("button[type='submit']")).click();
 
-    logStep("Navigating to Add Tour page");
-    await driver.findElement(By.linkText("Add Tour")).click();
+    logStep("Navigating to Add Tour page via dropdown");
+
+    const tourDropdownToggle = await driver.wait(
+      until.elementLocated(By.xpath("//button[contains(text(), 'Tour Management')]")),
+      10000
+    );
+    await tourDropdownToggle.click();
+
+    const addTourLink = await driver.wait(
+      until.elementLocated(By.xpath("//a[contains(text(), 'Add Tour')]")),
+      10000
+    );
+    await addTourLink.click();
+
 
     logStep("Filling tour details");
     await driver.findElement(By.id("title")).click();
@@ -38,7 +50,19 @@ async function testInvalidDate() {
     await driver.findElement(By.name("question")).sendKeys("what is test question");
 
     await driver.findElement(By.id("tour_date")).click();
-    await driver.findElement(By.id("tour_date")).sendKeys("2025-05-17");
+    const pastDate = new Date();
+    pastDate.setDate(pastDate.getDate() - 1);
+    const yyyy = pastDate.getFullYear();
+    const mm = String(pastDate.getMonth() + 1).padStart(2, '0');
+    const dd = String(pastDate.getDate()).padStart(2, '0');
+    const formattedPastDate = `${yyyy}-${mm}-${dd}`;
+
+    await driver.executeScript(`
+      const dateInput = document.getElementById('tour_date');
+      dateInput.value = '${formattedPastDate}';
+      dateInput.dispatchEvent(new Event('input', { bubbles: true }));
+    `);
+
 
     await driver.wait(until.elementLocated(By.id("tour_time")), 5000);
     await driver.wait(until.elementIsVisible(await driver.findElement(By.id("tour_time"))), 5000);
@@ -46,7 +70,7 @@ async function testInvalidDate() {
     
     logStep("Uploading cover image");
     await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.id("cover_image")));
-    await driver.findElement(By.id("cover_image")).sendKeys("C:\\Users\\Administrator\\Pictures\\Screenshots\\p3.png");
+    await driver.findElement(By.id("cover_image")).sendKeys("C:\\Users\\riansoe\\Pictures\\RianSoe.png");
     
     logStep("Adding video and event links");
     await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.id("video_link")));
@@ -55,43 +79,57 @@ async function testInvalidDate() {
     await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.id("live_event_link")));
     await driver.findElement(By.id("live_event_link")).sendKeys("http://zoom/eventlink");
     
-    logStep("Adding tour options");
-    await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.css(".mb-2")));
-    await driver.findElement(By.css(".mb-2")).sendKeys("how are you");
-    
-    await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.css(".border:nth-child(4)")));
-    await driver.findElement(By.css(".border:nth-child(4)")).sendKeys("good");
-    
-    await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.css(".border:nth-child(5)")));
-    await driver.findElement(By.css(".border:nth-child(5)")).sendKeys("yes");
-    
-    await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.css(".border:nth-child(6)")));
-    await driver.findElement(By.css(".border:nth-child(6)")).sendKeys("no");
-    
-    await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", await driver.findElement(By.css(".border:nth-child(7)")));
-    await driver.findElement(By.css(".border:nth-child(7)")).sendKeys("not bad");
-    
-    logStep("Submitting tour form");
-    const submitButton = await driver.wait(until.elementLocated(By.css('button.btn.btn-secondary.mb-3')), 10000);
+    logStep("Filling dynamic question and options");
 
-    // Ensure it's displayed and enabled
+    const questionInput = await driver.wait(until.elementLocated(By.css("input[placeholder='Enter your question here']")), 10000);
+    await questionInput.sendKeys("Is this date valid?");
+
+    const optionInputs = await driver.findElements(By.css("input[placeholder^='Enter option']"));
+    const optionTexts = ["Yes", "No", "Maybe", "Not sure"];
+
+    for (let i = 0; i < optionInputs.length && i < optionTexts.length; i++) {
+      await optionInputs[i].sendKeys(optionTexts[i]);
+    }
+
+    
+    // Submit tour form
+    logStep("Submitting tour form");
+    const submitButton = await driver.wait(until.elementLocated(By.id("createTourBtn")), 10000);
     await driver.wait(until.elementIsVisible(submitButton), 10000);
     await driver.wait(until.elementIsEnabled(submitButton), 10000);
-
-    // Scroll it into view and then try to click using JavaScript
     await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' }); arguments[0].click();", submitButton);
+    await driver.sleep(3000); 
 
     logStep("Verifying date validation error");
-    await driver.wait(until.elementLocated(By.className("invalid-feedback")), 10000);
-    const errorMessageElement = await driver.findElement(By.className("invalid-feedback"));
-    const errorMessage = await errorMessageElement.getText();
 
-    const expectedError = "The tour date field must be a date after today.";
+    const dateInput = await driver.findElement(By.id("tour_date"));
+    await driver.executeScript("arguments[0].scrollIntoView({ behavior: 'smooth', block: 'center' });", dateInput);
+    await driver.sleep(500); // Let Alpine render the error
+
+
+    const dateErrorElement = await driver.wait(
+      until.elementLocated(By.xpath("//*[contains(text(), 'The tour must start at least 5 hours from now.')]")),
+      10000
+    );
+    await driver.wait(until.elementIsVisible(dateErrorElement), 10000);
+    
+    const errorMessage = await dateErrorElement.getText();
+    const expectedError = "The tour must start at least 5 hours from now.";
+    
     if (errorMessage.includes(expectedError)) {
       logSuccess(`Expected error message '${expectedError}' was displayed`);
     } else {
       logFailure(`Expected '${expectedError}', but got '${errorMessage}'`);
     }
+    
+
+    const allErrors = await driver.findElements(By.className("invalid-feedback"));
+    for (let i = 0; i < allErrors.length; i++) {
+      const msg = await allErrors[i].getText();
+      logInfo(`Validation error ${i + 1}: ${msg}`);
+    }
+
+
 
   } catch (error) {
     logFailure("Test execution failed", error);

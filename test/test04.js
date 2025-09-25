@@ -1,8 +1,8 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const config = require('../config/config');
 const locator = require('../config/locator');
-const setupDriver = require('./driver_setup');
-const { logStep, logSuccess, logFailure, logInfo } = require('./test_utils');
+const setupDriver = require('../utils/driver_setup');
+const { logStep, logSuccess, logFailure, logInfo } = require('../utils/test_utils');
 
 async function testExistingEmail() {
     let driver;

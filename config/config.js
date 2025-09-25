@@ -1,6 +1,6 @@
 module.exports = {
     // Application URL - can be overridden by environment variable
-    URL: process.env.APP_URL || "http://localhost:8083/",
+    URL: process.env.APP_URL || "http://98.80.5.203/",
     
     // Browser configuration
     Browser: process.env.BROWSER || "chrome",

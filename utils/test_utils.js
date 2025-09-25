@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Directory to store logs
-const LOG_FILE = path.resolve(__dirname, "test_results", "test_results.log");
+const LOG_FILE = path.resolve(__dirname, "..", "reports", "test_results", "test_results.log");
 const LOG_DIR = path.dirname(LOG_FILE);
 
 // Ensure log directory exists

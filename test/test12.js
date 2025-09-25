@@ -1,8 +1,8 @@
 const { Builder, By, Key } = require('selenium-webdriver');
 const until = require('selenium-webdriver/lib/until');
 const config = require('../config/config');
-const setupDriver = require('./driver_setup');
-const { logStep, logSuccess, logFailure, logInfo } = require('./test_utils');
+const setupDriver = require('../utils/driver_setup');
+const { logStep, logSuccess, logFailure, logInfo } = require('../utils/test_utils');
 // Database utilities removed; provide local no-op stubs
 const updateTourStartTime = async () => {};
 const getTourIdByTitle = async () => 'DUMMY_TOUR_ID';
